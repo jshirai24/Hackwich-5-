@@ -12,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="XcodeTroubleshootingAssignment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -21,22 +21,28 @@
                                 <rect key="frame" x="144" y="411" width="126" height="92"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Enter App"/>
+                                <connections>
+                                    <segue destination="yHp-aw-ha6" kind="show" id="QiX-wg-YuT"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="enterAppButton" destination="FmP-44-wqW" id="wY1-ux-sMD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-57.971014492753625" y="103.79464285714285"/>
         </scene>
-        <!--View Controller-->
+        <!--Second View Controller2-->
         <scene sceneID="xh5-fb-Y82">
             <objects>
-                <viewController id="yHp-aw-ha6" sceneMemberID="viewController">
+                <viewController id="yHp-aw-ha6" customClass="SecondViewController2" customModule="XcodeTroubleshootingAssignment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="L4m-6s-w8L">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="848"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kc1-Ey-B3i">
@@ -45,6 +51,7 @@
                                 <state key="normal" title="Change Color"/>
                                 <connections>
                                     <action selector="changeColorButtonPressed:" destination="yHp-aw-ha6" eventType="touchUpInside" id="R9q-af-lEa"/>
+                                    <action selector="changeColorPressed:" destination="yHp-aw-ha6" eventType="touchUpInside" id="zGe-NK-lzu"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KnD-zI-Vte">
@@ -52,7 +59,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Change Label Text"/>
                                 <connections>
-                                    <action selector="changeLabelTextButtonPressed:" destination="yHp-aw-ha6" eventType="touchUpInside" id="JVd-WA-FYB"/>
+                                    <action selector="changeLabelTextButtonPressed:" destination="yHp-aw-ha6" eventType="touchUpInside" id="cuS-vV-Ukq"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XZZ-oZ-tN7">
@@ -83,6 +90,12 @@
                         <viewLayoutGuide key="safeArea" id="ZNq-w1-5TO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="4rD-O0-xcl"/>
+                    <connections>
+                        <outlet property="changeLabelButton" destination="KnD-zI-Vte" id="nxN-G2-giE"/>
+                        <outlet property="colorChange" destination="Kc1-Ey-B3i" id="VIb-kK-LCs"/>
+                        <outlet property="labelTextChange" destination="KnD-zI-Vte" id="Byv-dK-F9i"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gio-gN-NKZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
