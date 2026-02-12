@@ -34,7 +34,7 @@ class SecondViewController2: UIViewController {
     @IBOutlet weak var colorChange: UIButton!
     
     @IBAction func changeColorPressed(_ sender: UIButton) {
-        view.backgroundColor = .blue
+        view.backgroundColor = .green
     }
     
     
@@ -42,8 +42,9 @@ class SecondViewController2: UIViewController {
     @IBOutlet weak var changeLabelButton: UIButton!
     
     
-    @IBOutlet weak var firstLabel: UILabel!
 
+    @IBOutlet weak var firstLabel: UILabel!
+    
     @IBAction func changeLabelTextButtonPressed(_ sender: UIButton) {
   
         firstLabel.text = "I feel confident with the Xcode troubleshooting process"
